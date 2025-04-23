@@ -12,7 +12,7 @@ pregunta.pack()
 
 def nombre():
     nomvar = pregunta.get()
-    nombre = tk.Label(ventana,text=("Hola, ", nomvar, ", te saluda Juani!"), font=("arial", 20), bg=("Skyblue"))
+    nombre = tk.Label(ventana,text=("Hola, {nomvar}, te saluda Juani!"), font=("arial", 20), bg=("Skyblue"))
     nombre.pack()
 
 saludar = tk.Button(ventana, text="Saludar", command=nombre, font=("arial",20))
