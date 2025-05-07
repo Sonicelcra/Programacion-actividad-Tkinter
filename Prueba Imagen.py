@@ -18,9 +18,19 @@ def menuPrincipal():
     
     imagenTK = ImageTk.PhotoImage(imagenRedimensionada)
 
+    button1 = tk.Button(vt, text="Graficar.", font=("Arial", 20), command=graficar)
+    button1.pack(side=tk.TOP)
+
     etiqueta = tk.Label(vt, image=imagenTK)
     etiqueta.pack()
     
+    vt.mainloop()
+
+def graficar():
+    for widget in vt.winfo_children():
+        widget.destroy()
+    texto = tk.Label(vt, text="Has sido graficado.", font=("Comic Sans", 50))
+    texto.place(x="450", y="350")
     vt.mainloop()
 
 def main():
