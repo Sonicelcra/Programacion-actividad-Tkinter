@@ -18,11 +18,11 @@ def menuPrincipal():
     
     imagenTK = ImageTk.PhotoImage(imagenRedimensionada)
 
-    button1 = tk.Button(vt, text="Graficar.", font=("Arial", 20), command=graficar)
-    button1.pack(side=tk.TOP)
-
     etiqueta = tk.Label(vt, image=imagenTK)
-    etiqueta.pack()
+    etiqueta.place(width=ancho, height=alto)
+
+    button1 = tk.Button(vt, text="Graficar.", font=("Arial", 20), command=graficar)
+    button1.place(x=500, y=600)
     
     vt.mainloop()
 
